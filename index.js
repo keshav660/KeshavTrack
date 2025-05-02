@@ -11,8 +11,6 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 const methodOverride = require("method-override");
 app.use(methodOverride("_method"));
-app.use(express.urlencoded({ extended: true }));
-app.use(methodOverride("_method")); // <-- yahan lagana
 
 // Dummy Data
 let progress = [
@@ -27,6 +25,11 @@ let progress = [
         work: "1. REST ",
     },
 ];
+
+// 🟢 Root route
+app.get("/", (req, res) => {
+    res.redirect("/progress"); // Redirect to /progress
+});
 
 // 🟢 Show all progress
 app.get("/progress", (req, res) => {
@@ -77,11 +80,9 @@ app.post("/progress/:id/delete", (req, res) => {
 });
 app.delete("/progress/:id", (req, res) => {
     const { id } = req.params;
-    // id ko chhodke baaki sab filter karo
     progress = progress.filter(p => p.id !== id);
     res.redirect("/progress");
 });
-
 
 app.listen(port, () => {
     console.log("listening to port : 8080");

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Detail</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <main class="card detail">
+        <h2><%= prog.date %></h2>
+        <p><%= prog.work %></p>
+
+        <div class="actions">
+            <a class="btn" href="/progress/<%= prog.id %>/edit">Edit</a>
+            <form action="/progress/<%= prog.id %>/delete" method="POST" onsubmit="return confirm('Delete karna hai?')">
+                <button class="btn danger">Delete</button>
+            </form>
+        </div>
+        <a class="btn" href="/progress">Back</a>
+    </main>
+</body>
+</html>

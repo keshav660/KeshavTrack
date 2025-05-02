@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Progress</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <main class="form-container">
+        <h2>New Daily Progress</h2>
+        <form action="/progress" method="POST">
+            <input type="date" name="date" required>
+            <textarea name="work" placeholder="Write your progress..." required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>KeshavTrack</title>
+    <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+    <!-- Top Header with Logo and Title -->
+    <header>
+        <img src="/logo.png" alt="KeshavTrack Logo" />
+        <h1>KeshavTrack</h1>
+    </header>
+
+    <!-- Card Container: Wraps horizontally and goes down on smaller screens -->
+    <div class="card-container">
+        <% for (prog of progress) { %>
+            <div class="card">
+                <div class="card-content">
+                    <!-- Date and Work Description -->
+                    <h3><%= prog.date %></h3>
+                    <h4><%= prog.work %></h4>
+                </div>
+                <div class="actions">
+                    <!-- View Button -->
+                    <a class="btn" href="/progress/<%= prog.id %>">🔍 View</a>
+
+                    <!-- Edit Button -->
+                    <a class="btn" href="/progress/<%= prog.id %>/edit">✏️ Edit</a>
+
+                    <!-- Delete Form Button -->
+                    <form action="/progress/<%= prog.id %>?_method=DELETE" method="POST">
+                        <button class="btn danger" onclick="return confirm('Pakka delete karna hai?')">🗑 Delete</button>
+                    </form>
+                </div>
+            </div>
+        <% } %>
+    </div>
+
+    <!-- Add New Progress Button -->
+    <a class="btn" href="/progress/new" style="margin: 20px;">➕ Add New Progress</a>
+</body>
+</html>

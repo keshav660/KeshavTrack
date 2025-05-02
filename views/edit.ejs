@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Progress</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <main class="form-container">
+        <h2>Edit Progress</h2>
+        <form action="/progress/<%= prog.id %>/update" method="POST">
+            <input type="date" name="date" value="<%= prog.date %>" required>
+            <textarea name="work" required><%= prog.work %></textarea>
+            <button type="submit">Update</button>
+        </form>
+    </main>
+</body>
+</html>

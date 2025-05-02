@@ -7,8 +7,8 @@ Built with `Node.js`, `Express`, and `EJS`, it provides a smooth UI, responsive 
 
 ## 📸 Preview
 
-![KeshavTrack Screenshot](./public/preview.png)  
-*(Add your screenshot here for better presentation)*
+![image](https://github.com/user-attachments/assets/dee24e95-4434-413b-b870-2bc1cef064c2)
+
 
 ---
 
@@ -31,11 +31,4 @@ Built with `Node.js`, `Express`, and `EJS`, it provides a smooth UI, responsive 
 - **Styling:** Custom CSS with animations
 
 ---
-
-## 📦 Installation & Run Locally
-
-```bash
-git clone https://github.com/yourusername/keshavtrack.git
-cd keshavtrack
-npm install
-node index.js
+click here to go live to keshavtrack : https://keshavtrack.onrender.com
